@@ -6,7 +6,7 @@ const geocode = require('./utils/geocode');
 
 
 const app = express(); // Calling express() must be done before creating your path (below).
-
+const port = process.env.PORT || 3000; // env is an object where we can access environment variables.
 
 // Define paths for Express config.
 const publicDirPath = path.join(__dirname, '../public'); // path.join() method joins all given path segments together.
@@ -103,6 +103,6 @@ app.get('*', (req, res) => {
 
 
 // The process of starting up a server is an asynchronous process.
-app.listen(3000, () => {
-    console.log('Server is up');
+app.listen(port, () => {
+    console.log('Server is up on port ' + port);
 });
