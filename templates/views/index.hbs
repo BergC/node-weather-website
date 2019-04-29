@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+        <div class="main-content">
+            {{>header}} <!-- To access a partial you use the double curly brackets followed by a greater than equal sign then the file name. -->
+            <p>Use this site to get your Weather!</p>
+
+            <form>
+                <input placeholder="Try typing a city!">
+                <button>
+                    Search
+                </button>
+            </form>
+
+            <p id="messageOne">
+
+            </p>
+
+            <p id="messageTwo">
+
+            </p>
+        </div>
+        
+        <!-- <h1>{{title}}</h1> HBS syntax to access one of the variables we defined in app.js is inside two curly brackets. -->
+        {{>footer}}
+
+        <script src="/scripts/app.js"></script>
+    </body>
+
+</html>
